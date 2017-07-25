@@ -1,5 +1,5 @@
-# headless-jd2-docker
-Headless JDownloader 2 Docker Container
+# vnc-jdownloader
+JDownloader 2 Docker Container with GUI/VNC
 
 ## Running the container
 0. `sudo su`
