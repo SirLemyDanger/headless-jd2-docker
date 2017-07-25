@@ -22,7 +22,7 @@ RUN \
 COPY startJD2.sh /opt/JDownloader/
 RUN chmod +x /opt/JDownloader/startJD2.sh
 
-chown -R 1100:1100 /opt/JDownloader/
+RUN chown -R 1100:1100 /opt/JDownloader/
 
 USER 1100:1100
 
