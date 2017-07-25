@@ -4,8 +4,8 @@ MAINTAINER LemyDanger <docker-image@lemydanger.eu>
 
 #install java
 USER 0
-apt-get update 
-apt-get install -y openjdk-8-jre
+RUN apt-get update; \
+apt-get install -y openjdk-8-jre; \
 apt-get clean -y
 
 RUN groupadd -r -g 1100 jdownloader \
