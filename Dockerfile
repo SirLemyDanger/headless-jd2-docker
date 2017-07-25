@@ -25,6 +25,7 @@ RUN chmod +x /opt/JDownloader/startJD2.sh
 RUN chown -R 1100:1100 /opt/JDownloader/
 
 VOLUME /opt/JDownloader/cfg
+RUN chown -R 1100:1100 /opt/JDownloader/cfg
 #click'n'load port
 EXPOSE 9666
 
