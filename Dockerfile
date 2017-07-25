@@ -29,10 +29,10 @@ RUN chown -R 1100:1100 /opt/JDownloader/cfg
 #click'n'load port
 EXPOSE 9666
 
-ADD ./dockerstartup/ /dockerstartup/
-RUN chmod +x /dockerstartup/jdownloader_startup.sh
+# ADD ./dockerstartup/ /dockerstartup/
+# RUN chmod +x /dockerstartup/jdownloader_startup.sh
 
 USER 1100:1100
 # Run this when the container is started
-ENTRYPOINT ["/dockerstartup/jdownloader_startup.sh"]
+# ENTRYPOINT ["/dockerstartup/jdownloader_startup.sh"]
 CMD /opt/JDownloader/startJD2.sh
