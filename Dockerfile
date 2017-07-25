@@ -29,5 +29,8 @@ VOLUME /opt/JDownloader/cfg
 #click'n'load port
 EXPOSE 9666
 
+ADD .dockerstartup/jdownloader_startup.sh
+
 # Run this when the container is started
+ENTRYPOINT ["/dockerstartup/jdownloader_startup.sh"]
 CMD /opt/JDownloader/startJD2.sh
