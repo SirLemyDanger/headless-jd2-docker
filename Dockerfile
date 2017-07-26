@@ -31,6 +31,13 @@ VOLUME /opt/JDownloader/cfg
 
 #click'n'load port
 EXPOSE 9666
+RUN \
+    apt-get update; \
+    apt-get install -y iptables; \
+    apt-get clean -y
+RUN \
+    sysctl -w net.ipv4.conf.eth0.route_localnet=1 &&\
+    iptables -t nat -I PREROUTING -p tcp --dport 9666 -j DNAT --to-destination 127.0.0.1:9666
 
 USER $JD_UID:$JD_GID
 # Run this when the container is started
