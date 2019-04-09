@@ -21,6 +21,8 @@ RUN \
 	wget -O /opt/JDownloader/JDownloader.jar --user-agent="https://hub.docker.com/r/lemydanger/vnc-jdownloader/" --progress=bar:force http://installer.jdownloader.org/JDownloader.jar && \
 	java -Djava.awt.headless=true -jar /opt/JDownloader/JDownloader.jar
     
+#ADD rar5 beta support
+COPY lib/* /opt/JDownloader/libs/
 
 COPY startJD2.sh /opt/JDownloader/
 RUN chmod +x /opt/JDownloader/startJD2.sh
